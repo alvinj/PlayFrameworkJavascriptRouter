@@ -1,0 +1,13 @@
+# Routes
+
+# show the signup form on the home page
+GET   /                       controllers.Application.showSignUpForm
+POST  /signUp                 controllers.Application.createUser
+
+# Javascript routing
+GET   /javascriptRoutes       controllers.Application.javascriptRoutes
+GET   /isEmailExist/:email    controllers.Application.doesEmailAddressExist(email: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file       controllers.Assets.at(path="/public", file)
+
